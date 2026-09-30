@@ -1,0 +1,407 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fffdf8;
+    color: #252525;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+.header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.menu {
+    display: flex;
+    gap: 34px;
+}
+
+.menu a {
+    font-size: 15px;
+    transition: opacity 0.25s;
+}
+
+.menu a:hover {
+    opacity: 0.5;
+}
+
+.hero {
+    max-width: 1200px;
+    min-height: 570px;
+    margin: 10px auto 80px;
+    padding: 70px;
+    border-radius: 32px;
+    background: #d8a5b3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-text {
+    width: 55%;
+    position: relative;
+    z-index: 2;
+    animation: showContent 0.8s ease;
+}
+
+.small-text {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    line-height: 0.95;
+    max-width: 650px;
+    letter-spacing: -3px;
+    margin-bottom: 28px;
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 470px;
+    margin-bottom: 36px;
+}
+
+.main-button {
+    display: inline-block;
+    background: #252525;
+    color: white;
+    padding: 17px 26px;
+    border-radius: 100px;
+    font-size: 15px;
+    transition: transform 0.25s, background 0.25s;
+}
+
+.main-button:hover {
+    transform: translateY(-3px);
+    background: #4b4b4b;
+}
+
+.hero-shape {
+    width: 40%;
+    height: 420px;
+    position: relative;
+}
+
+.shape-one {
+    width: 260px;
+    height: 260px;
+    background: #6aeed1;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+.shape-two {
+    width: 200px;
+    height: 280px;
+    background: #ff947e;
+    border-radius: 120px;
+    position: absolute;
+    right: 180px;
+    bottom: -40px;
+    transform: rotate(25deg);
+}
+
+.shape-three {
+    width: 140px;
+    height: 140px;
+    border: 28px solid #fff6e4;
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+}
+
+.products {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 40px 110px;
+}
+
+.section-title {
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 46px;
+    letter-spacing: -2px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+}
+
+.product-card img {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-info {
+    padding: 24px;
+}
+
+.product-info h3 {
+    font-size: 23px;
+    margin-bottom: 11px;
+}
+
+.product-info > p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+    min-height: 44px;
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 26px;
+}
+
+.product-bottom span {
+    font-weight: 700;
+}
+
+.buy-button {
+    border: none;
+    background: #f4f0e8;
+    padding: 11px 17px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.25s;
+}
+
+.buy-button:hover {
+    background: #cfea75;
+    transform: scale(1.04);
+}
+
+.about {
+    max-width: 1120px;
+    margin: 0 auto 100px;
+    padding: 75px;
+    background: #dcecae;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.about-left,
+.about-right {
+    width: 50%;
+}
+
+.about h2 {
+    font-size: 44px;
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.about-right {
+    display: flex;
+    align-items: flex-end;
+}
+
+.about-right p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.footer {
+    border-top: 1px solid #ddd8ce;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 55px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.footer > div > p {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #777;
+}
+
+.footer-info {
+    text-align: right;
+}
+
+.footer-info p {
+    margin-bottom: 8px;
+}
+
+@keyframes showContent {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 750px) {
+
+    .header {
+        padding: 22px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        gap: 18px;
+    }
+
+    .hero {
+        margin: 0 15px 55px;
+        padding: 40px 25px;
+        min-height: 630px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-shape {
+        width: 100%;
+        height: 260px;
+        margin-top: 30px;
+    }
+
+    .shape-one {
+        width: 190px;
+        height: 190px;
+        right: 10px;
+    }
+
+    .shape-two {
+        width: 130px;
+        height: 190px;
+        right: 140px;
+    }
+
+    .shape-three {
+        width: 100px;
+        height: 100px;
+        border-width: 20px;
+    }
+
+    .products {
+        padding: 40px 15px 70px;
+    }
+
+    .section-title h2 {
+        font-size: 36px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card img {
+        height: 390px;
+    }
+
+    .about {
+        margin: 0 15px 70px;
+        padding: 40px 25px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-left,
+    .about-right {
+        width: 100%;
+    }
+
+    .about h2 {
+        font-size: 36px;
+    }
+
+    .about-right p {
+        font-size: 16px;
+    }
+
+    .footer {
+        margin: 0 15px;
+        padding: 40px 0;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-info {
+        text-align: left;
+    }
+}
